@@ -1,7 +1,7 @@
 import { ColorCorrectionFilterRepository } from "@modules/ImageProcessor/Repositories/Pipes/ColorCorrectionFilterRepository";
 import { ResizeFilterRepository } from "@modules/ImageProcessor/Repositories/Pipes/ColorizeFilterRepository";
 import { SmoothingFilterRepository } from "@modules/ImageProcessor/Repositories/Pipes/SmoothingFilterRepository";
-import { ImageProcessor } from "@modules/ImageProcessor/UseCases/ImageProcessor/ImageProcessorUseCase";
+import { ImageProcessor } from "@modules/ImageProcessor/Process/ImageProcessor/ImageProcessorUseCase";
 
 const imageProcessor = new ImageProcessor();
 
