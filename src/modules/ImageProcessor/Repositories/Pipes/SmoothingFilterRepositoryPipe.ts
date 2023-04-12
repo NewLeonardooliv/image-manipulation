@@ -1,7 +1,7 @@
 import sharp from 'sharp';
 import { IFilter } from "../IFilter";
 
-export class SmoothingFilterRepository implements IFilter {
+export class SmoothingFilterRepositoryPipe implements IFilter {
     async process(imagemPath: string): Promise<void> {
         const imagem = await sharp(imagemPath);
 
