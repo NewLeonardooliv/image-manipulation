@@ -1,6 +1,6 @@
 # Portfolio Leonardo
 
-![leonardo-eta vercel app_](https://i.imgur.com/9lOvx54.png)
+![leonardo-eta vercel app_](https://i.imgur.com/Q0RqWuO.png)
 
 ## 🚀 Projeto
 
