@@ -1,9 +1,12 @@
-import { colorBlueFilterUseCase } from "@modules/Image/UseCases/ColorBlueFilter";
-import { colorCorrectionFilterUseCase } from "@modules/Image/UseCases/ColorCorrectionFilter";
-import { resizeFilterUseCase } from "@modules/Image/UseCases/ResizeFilter";
-import { smoothingFilterUseCase } from "@modules/Image/UseCases/SmoothingFilter";
+import { ColorCorrectionFilterRepository } from "@modules/ImageProcessor/Repositories/Pipes/ColorCorrectionFilterRepository";
+import { ResizeFilterRepository } from "@modules/ImageProcessor/Repositories/Pipes/ColorizeFilterRepository";
+import { SmoothingFilterRepository } from "@modules/ImageProcessor/Repositories/Pipes/SmoothingFilterRepository";
+import { ImageProcessor } from "@modules/ImageProcessor/UseCases/ImageProcessor/ImageProcessorUseCase";
 
-colorCorrectionFilterUseCase.execute('./images/imagem.png');
-smoothingFilterUseCase.execute('./images/imagem.png');
-resizeFilterUseCase.execute('./images/imagem.png');
-colorBlueFilterUseCase.execute('./images/imagem.png');
+const imageProcessor = new ImageProcessor();
+
+imageProcessor.addFilter(new ResizeFilterRepository());
+imageProcessor.addFilter(new ColorCorrectionFilterRepository());
+imageProcessor.addFilter(new SmoothingFilterRepository());
+
+imageProcessor.processImage('./images/imagem.png');
